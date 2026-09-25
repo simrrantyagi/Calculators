@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      background: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 260px;
+    }
+
+    #display {
+      width: 100%;
+      height: 50px;
+      font-size: 1.5em;
+      text-align: right;
+      padding: 10px;
+      border: none;
+      background: #eee;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 1.2em;
+      border: none;
+      background: #00aaff;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #0088cc;
+    }
+
+    .operator {
+      background: #ff8c00;
+    }
+
+    .operator:hover {
+      background: #e67600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="operator">/</button>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button class="operator">*</button>
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button class="operator">-</button>
+
+      <button>0</button>
+      <button>.</button>
+      <button id="clear">C</button>
+      <button class="operator">+</button>
+
+      <button id="equals" style="grid-column: span 4; background:#28a745;">=</button>
+    </div>
+  </div>
+  <script src="Calculator.js"></script> 
+  </body>
+</html>
